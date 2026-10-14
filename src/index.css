@@ -2,19 +2,21 @@
 
 @layer base {
   :root {
-    --bg-main: #06111F;
-    --bg-secondary: #0B2238;
-    --bg-card: #071827;
-    --bg-card-hover: #0E243B;
-    --midnight-blue: #0B2238;
+    --bg-main: #020B16;
+    --bg-secondary: #041522;
+    --bg-card: #061827;
+    --bg-card-hover: #0A2030;
+    --midnight-blue: #041522;
     --teal-glow: #00D5E8;
     --cyan-accent: #00D5E8;
-    --leaf-green: #12D6A0;
+    --electric-blue: #168BFF;
+    --teal-accent: #00CDB5;
+    --leaf-green: #63E86B;
     --golden-yellow: #f2c94c;
-    --text-primary: #F4F8FF;
-    --text-secondary: #B8C7D9;
-    --border-subtle: #0B2238;
-    --border-cyan-highlight: rgba(0, 213, 232, 0.3);
+    --text-primary: #F4F8FC;
+    --text-secondary: #A9BACB;
+    --border-subtle: rgba(0, 213, 232, 0.20);
+    --border-cyan-highlight: rgba(0, 213, 232, 0.45);
   }
 
   * {
@@ -44,46 +46,46 @@
 }
 
 .bg-radial-vignette {
-  background: radial-gradient(circle at 50% 20%, rgba(11, 34, 56, 0.7) 0%, rgba(6, 17, 31, 0.98) 70%);
+  background: radial-gradient(circle at 50% 20%, rgba(4, 21, 34, 0.7) 0%, rgba(2, 11, 22, 0.98) 70%);
 }
 
 /* ── Logo brand gradient text ── */
 .text-brand-gradient {
-  background: linear-gradient(90deg, #1D4ED8 0%, #00D5E8 50%, #12D6A0 100%);
+  background: linear-gradient(90deg, #168BFF 0%, #00D5E8 50%, #63E86B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-teal-green-gradient {
-  background: linear-gradient(135deg, #00D5E8 0%, #00B9C7 40%, #12D6A0 100%);
+  background: linear-gradient(135deg, #00D5E8 0%, #00CDB5 50%, #63E86B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gold-green-gradient {
-  background: linear-gradient(135deg, #F2C94C 0%, #12D6A0 100%);
+  background: linear-gradient(135deg, #F2C94C 0%, #63E86B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* ── Glass & Card styles ── */
 .glass-nav {
-  background: rgba(6, 17, 31, 0.92);
+  background: rgba(2, 11, 22, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(11, 34, 56, 0.85);
+  border-bottom: 1px solid rgba(0, 213, 232, 0.18);
 }
 
 .tech-card {
-  background-color: #071827;
-  border: 1px solid rgba(11, 34, 56, 0.85);
+  background-color: #061827;
+  border: 1px solid rgba(0, 213, 232, 0.20);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .tech-card:hover {
-  border-color: rgba(0, 213, 232, 0.4);
-  background-color: #0A1F33;
-  box-shadow: 0 10px 30px -10px rgba(0, 213, 232, 0.12);
+  border-color: rgba(0, 213, 232, 0.45);
+  background-color: #0A2030;
+  box-shadow: 0 10px 30px -10px rgba(0, 213, 232, 0.20);
 }
 
 /* ── Restrained luminous border effect ── */
@@ -92,7 +94,7 @@
 }
 
 .glow-border-green {
-  box-shadow: 0 0 25px -5px rgba(18, 214, 160, 0.25);
+  box-shadow: 0 0 25px -5px rgba(99, 232, 107, 0.25);
 }
 
 /* ── Product grid responsive ── */
@@ -120,11 +122,12 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #06111F;
+  background: #020B16;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0B2238;
+  background: #041522;
   border-radius: 3px;
+  border: 1px solid rgba(0, 213, 232, 0.15);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #00D5E8;

@@ -28,20 +28,21 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
     // Constellation / network particles
     const particleCount = 42;
     const colors = [
-      'rgba(0, 213, 232, ',   // bright cyan
-      'rgba(18, 214, 160, ',  // emerald teal
+      'rgba(0, 213, 232, ',   // primary cyan
+      'rgba(0, 205, 181, ',   // teal
+      'rgba(99, 232, 107, ',  // leaf green
+      'rgba(22, 139, 255, ',  // electric blue
       'rgba(242, 201, 76, ',  // golden yellow
-      'rgba(56, 189, 248, ',  // sky blue
     ];
 
     const particles = Array.from({ length: particleCount }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.35,
-      vy: (Math.random() - 0.5) * 0.35,
+      vx: (Math.random() - 0.5) * 0.32,
+      vy: (Math.random() - 0.5) * 0.32,
       radius: Math.random() * 1.8 + 0.6,
       color: colors[Math.floor(Math.random() * colors.length)],
-      alpha: Math.random() * 0.55 + 0.2,
+      alpha: Math.random() * 0.5 + 0.2,
       pulse: Math.random() * Math.PI * 2,
       pulseSpeed: Math.random() * 0.02 + 0.015,
     }));
@@ -64,7 +65,7 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
           if (p.y > height) p.y = 0;
         }
 
-        const curAlpha = Math.max(0.08, p.alpha + Math.sin(p.pulse) * 0.2);
+        const curAlpha = Math.max(0.08, p.alpha + Math.sin(p.pulse) * 0.18);
 
         // Particle circle with soft glow
         ctx.fillStyle = `${p.color}${curAlpha})`;
@@ -80,7 +81,7 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < 85) {
-            const lineAlpha = (1 - dist / 85) * 0.15 * curAlpha;
+            const lineAlpha = (1 - dist / 85) * 0.14 * curAlpha;
             ctx.strokeStyle = `rgba(0, 213, 232, ${lineAlpha})`;
             ctx.lineWidth = 0.75;
             ctx.beginPath();
@@ -108,7 +109,7 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
     const rect = containerRef.current.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5; // -0.5 to 0.5
     const y = (e.clientY - rect.top) / rect.height - 0.5; // -0.5 to 0.5
-    setMouseOffset({ x: x * 6, y: -y * 6 });
+    setMouseOffset({ x: x * 5, y: -y * 5 });
   };
 
   const handleMouseLeave = () => {
@@ -138,8 +139,8 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
         className="absolute w-[560px] h-[560px] rounded-full pointer-events-none z-[1]"
         style={{
           background:
-            'radial-gradient(circle at 50% 50%, rgba(0, 213, 232, 0.18) 0%, rgba(18, 214, 160, 0.12) 35%, rgba(11, 34, 56, 0.45) 60%, transparent 75%)',
-          filter: 'blur(35px)',
+            'radial-gradient(circle at 50% 50%, rgba(0, 213, 232, 0.16) 0%, rgba(0, 205, 181, 0.10) 35%, rgba(22, 139, 255, 0.08) 55%, transparent 75%)',
+          filter: 'blur(40px)',
         }}
       />
 
@@ -155,31 +156,21 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
         {/* Floating animated wrapper (10-15px loop + subtle 3D tilt) */}
         <div className="hero-holo-float relative w-full flex flex-col items-center">
           
-          {/* ── THE EXACT DIGITAL LEAF ARTWORK ── */}
-          <div
-            className="relative w-full flex items-center justify-center"
-            style={{
-              filter:
-                'drop-shadow(0 0 35px rgba(0, 213, 232, 0.55)) drop-shadow(0 0 75px rgba(18, 214, 160, 0.3)) drop-shadow(0 15px 35px rgba(6, 17, 31, 0.8))',
-            }}
-          >
-            {/* Base Image with seamless feathered radial mask */}
+          {/* ── THE EXACT DIGITAL LEAF ARTWORK (SEAMLESSLY BLENDED) ── */}
+          <div className="relative w-full flex items-center justify-center">
+            {/* Seamless feathered base illustration */}
             <img
-              src="/assets/main-leaf-hero.jpg"
+              src="/assets/main-leaf-hero-feathered.png"
               alt="Thenam Software Solutions - Futuristic Digital Leaf Network"
               className="w-full h-auto object-contain block"
               style={{
                 maxHeight: '520px',
-                WebkitMaskImage:
-                  'radial-gradient(ellipse 92% 88% at 50% 50%, black 66%, rgba(0, 0, 0, 0.85) 82%, transparent 100%)',
-                maskImage:
-                  'radial-gradient(ellipse 92% 88% at 50% 50%, black 66%, rgba(0, 0, 0, 0.85) 82%, transparent 100%)',
               }}
               onError={(e) => {
                 // Fallback attempt to alternate asset path if needed
                 const target = e.currentTarget as HTMLImageElement;
-                if (!target.src.includes('main%20design.jpeg')) {
-                  target.src = '/main design.jpeg';
+                if (!target.src.includes('main-leaf-hero.jpg')) {
+                  target.src = '/assets/main-leaf-hero.jpg';
                 }
               }}
             />
@@ -189,12 +180,12 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
             <div
               className="leaf-glow-pulse absolute pointer-events-none rounded-full"
               style={{
-                left: '20%',
-                top: '34%',
-                width: '32%',
-                height: '46%',
+                left: '21%',
+                top: '35%',
+                width: '30%',
+                height: '44%',
                 background:
-                  'radial-gradient(circle, rgba(0, 213, 232, 0.7) 0%, rgba(29, 78, 216, 0.35) 45%, transparent 75%)',
+                  'radial-gradient(circle, rgba(0, 213, 232, 0.65) 0%, rgba(22, 139, 255, 0.35) 45%, transparent 75%)',
                 mixBlendMode: 'screen',
               }}
             />
@@ -203,12 +194,12 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
             <div
               className="leaf-glow-pulse-delay-1 absolute pointer-events-none rounded-full"
               style={{
-                left: '42%',
-                top: '12%',
-                width: '38%',
-                height: '54%',
+                left: '43%',
+                top: '14%',
+                width: '36%',
+                height: '52%',
                 background:
-                  'radial-gradient(circle, rgba(18, 214, 160, 0.65) 0%, rgba(0, 213, 232, 0.25) 50%, transparent 75%)',
+                  'radial-gradient(circle, rgba(99, 232, 107, 0.60) 0%, rgba(0, 205, 181, 0.30) 45%, transparent 75%)',
                 mixBlendMode: 'screen',
               }}
             />
@@ -217,12 +208,12 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
             <div
               className="leaf-glow-pulse-delay-2 absolute pointer-events-none rounded-full"
               style={{
-                left: '52%',
-                top: '44%',
-                width: '32%',
-                height: '38%',
+                left: '53%',
+                top: '45%',
+                width: '30%',
+                height: '36%',
                 background:
-                  'radial-gradient(circle, rgba(242, 201, 76, 0.6) 0%, rgba(18, 214, 160, 0.22) 50%, transparent 75%)',
+                  'radial-gradient(circle, rgba(242, 201, 76, 0.55) 0%, rgba(99, 232, 107, 0.20) 50%, transparent 75%)',
                 mixBlendMode: 'screen',
               }}
             />
@@ -232,16 +223,16 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
               className="absolute inset-0 overflow-hidden pointer-events-none rounded-2xl"
               style={{
                 WebkitMaskImage:
-                  'radial-gradient(ellipse 85% 82% at 50% 50%, black 60%, transparent 95%)',
+                  'radial-gradient(ellipse 80% 78% at 50% 50%, black 55%, transparent 90%)',
                 maskImage:
-                  'radial-gradient(ellipse 85% 82% at 50% 50%, black 60%, transparent 95%)',
+                  'radial-gradient(ellipse 80% 78% at 50% 50%, black 55%, transparent 90%)',
               }}
             >
               <div
                 className="holo-scan-sweep absolute w-[200%] h-32 -left-1/2"
                 style={{
                   background:
-                    'linear-gradient(180deg, transparent 0%, rgba(0, 213, 232, 0.35) 50%, transparent 100%)',
+                    'linear-gradient(180deg, transparent 0%, rgba(0, 213, 232, 0.30) 50%, transparent 100%)',
                   mixBlendMode: 'screen',
                 }}
               />
@@ -257,7 +248,7 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
                 width: '7px',
                 height: '7px',
                 background: '#FFFFFF',
-                boxShadow: '0 0 12px #12D6A0, 0 0 24px #12D6A0',
+                boxShadow: '0 0 12px #63E86B, 0 0 24px #63E86B',
               }}
             />
             {/* Blue Leaf Apex Tip */}
@@ -269,7 +260,7 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
                 width: '6px',
                 height: '6px',
                 background: '#FFFFFF',
-                boxShadow: '0 0 12px #00D5E8, 0 0 22px #00D5E8',
+                boxShadow: '0 0 12px #00D5E8, 0 0 22px #168BFF',
                 animationDelay: '1s',
               }}
             />
@@ -308,7 +299,7 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
                 width: '8px',
                 height: '8px',
                 background: '#FFFFFF',
-                boxShadow: '0 0 16px #00D5E8, 0 0 32px #12D6A0',
+                boxShadow: '0 0 16px #00D5E8, 0 0 32px #00CDB5',
                 animationDelay: '2.2s',
               }}
             />
@@ -328,7 +319,7 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
               className="absolute w-[80%] max-w-[460px] h-20 rounded-full"
               style={{
                 background:
-                  'radial-gradient(ellipse at center, rgba(0, 213, 232, 0.45) 0%, rgba(18, 214, 160, 0.25) 40%, rgba(11, 34, 56, 0.4) 65%, transparent 80%)',
+                  'radial-gradient(ellipse at center, rgba(0, 213, 232, 0.40) 0%, rgba(0, 205, 181, 0.22) 40%, rgba(4, 21, 34, 0.5) 65%, transparent 80%)',
                 transform: 'rotateX(76deg) scale(1.1)',
                 filter: 'blur(10px)',
               }}
@@ -336,29 +327,29 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
 
             {/* 2. Outer Segmented Dashed Ring (Clockwise Rotation) */}
             <div
-              className="platform-rotate-cw absolute w-[86%] max-w-[500px] h-[86%] max-h-[500px] rounded-full border border-dashed border-[#00D5E8]/40"
+              className="platform-rotate-cw absolute w-[86%] max-w-[500px] h-[86%] max-h-[500px] rounded-full border border-dashed border-[#00D5E8]/35"
               style={{
                 borderWidth: '1.5px',
-                boxShadow: '0 0 18px rgba(0, 213, 232, 0.25)',
+                boxShadow: '0 0 18px rgba(0, 213, 232, 0.20)',
               }}
             />
 
             {/* 3. Middle Precision Ring with 4 Accent Pips (Counter-Clockwise Rotation) */}
             <div
-              className="platform-rotate-ccw absolute w-[72%] max-w-[420px] h-[72%] max-h-[420px] rounded-full border border-[#12D6A0]/55"
+              className="platform-rotate-ccw absolute w-[72%] max-w-[420px] h-[72%] max-h-[420px] rounded-full border border-[#00CDB5]/50"
               style={{
                 borderWidth: '1.5px',
-                boxShadow: '0 0 15px rgba(18, 214, 160, 0.3)',
+                boxShadow: '0 0 15px rgba(0, 205, 181, 0.25)',
               }}
             >
               {/* North Pip */}
               <span className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#00D5E8] shadow-[0_0_8px_#00D5E8]" />
               {/* South Pip */}
-              <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#12D6A0] shadow-[0_0_8px_#12D6A0]" />
+              <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#63E86B] shadow-[0_0_8px_#63E86B]" />
               {/* East Pip */}
               <span className="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 rounded-full bg-[#F2C94C] shadow-[0_0_8px_#F2C94C]" />
               {/* West Pip */}
-              <span className="absolute top-1/2 -left-1 -translate-y-1/2 w-2 h-2 rounded-full bg-[#00D5E8] shadow-[0_0_8px_#00D5E8]" />
+              <span className="absolute top-1/2 -left-1 -translate-y-1/2 w-2 h-2 rounded-full bg-[#168BFF] shadow-[0_0_8px_#168BFF]" />
             </div>
 
             {/* 4. Inner Luminous Holographic Ring */}
@@ -367,13 +358,13 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
               style={{
                 transform: 'rotateX(76deg)',
                 boxShadow:
-                  '0 0 25px rgba(0, 213, 232, 0.65), inset 0 0 15px rgba(18, 214, 160, 0.45)',
+                  '0 0 25px rgba(0, 213, 232, 0.60), inset 0 0 15px rgba(0, 205, 181, 0.40)',
               }}
             />
 
             {/* 5. Expanding Holographic Pulse Wave */}
             <div
-              className="platform-pulse-wave absolute w-[60%] max-w-[350px] h-[60%] max-h-[350px] rounded-full border border-[#00D5E8]/70"
+              className="platform-pulse-wave absolute w-[60%] max-w-[350px] h-[60%] max-h-[350px] rounded-full border border-[#00D5E8]/60"
             />
 
             {/* 6. Core Energy Convergence Point */}
@@ -381,9 +372,9 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
               className="absolute w-12 h-12 rounded-full"
               style={{
                 background:
-                  'radial-gradient(circle, #F4F8FF 0%, #00D5E8 40%, rgba(18, 214, 160, 0.5) 70%, transparent 100%)',
+                  'radial-gradient(circle, #F4F8FC 0%, #00D5E8 40%, rgba(0, 205, 181, 0.5) 70%, transparent 100%)',
                 transform: 'rotateX(76deg) scale(1.4)',
-                boxShadow: '0 0 25px #00D5E8, 0 0 50px #12D6A0',
+                boxShadow: '0 0 25px #00D5E8, 0 0 50px #00CDB5',
                 filter: 'blur(2px)',
               }}
             />
@@ -400,7 +391,7 @@ export const HeroLeafNetwork: React.FC<{ className?: string }> = ({ className = 
               marginTop: '-35px',
               borderRadius: '50%',
               background:
-                'radial-gradient(ellipse at center, rgba(3, 8, 15, 0.95) 0%, rgba(6, 17, 31, 0.6) 50%, transparent 75%)',
+                'radial-gradient(ellipse at center, rgba(2, 11, 22, 0.95) 0%, rgba(2, 11, 22, 0.6) 50%, transparent 75%)',
               filter: 'blur(8px)',
             }}
           />

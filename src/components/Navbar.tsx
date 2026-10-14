@@ -34,11 +34,11 @@ export const Navbar: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'glass-nav py-3'
-          : 'py-3.5 border-b border-[#0B2238]'
+          : 'py-3.5 border-b border-[rgba(0,213,232,0.18)]'
       }`}
       style={
         !isScrolled
-          ? { background: 'rgba(6, 17, 31, 0.88)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }
+          ? { background: 'rgba(2, 11, 22, 0.90)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }
           : undefined
       }
     >
@@ -72,16 +72,16 @@ export const Navbar: React.FC = () => {
                     position: 'relative',
                     padding: '4px 0',
                     whiteSpace: 'nowrap',
-                    color: isActive ? '#00D5E8' : '#B8C7D9',
+                    color: isActive ? '#00D5E8' : '#A9BACB',
                     fontWeight: isActive ? 600 : 500,
                     textDecoration: 'none',
                     transition: 'color 0.2s ease',
                   }}
                   onMouseEnter={e => {
-                    if (!isActive) (e.currentTarget as HTMLElement).style.color = '#F4F8FF';
+                    if (!isActive) (e.currentTarget as HTMLElement).style.color = '#F4F8FC';
                   }}
                   onMouseLeave={e => {
-                    if (!isActive) (e.currentTarget as HTMLElement).style.color = '#B8C7D9';
+                    if (!isActive) (e.currentTarget as HTMLElement).style.color = '#A9BACB';
                   }}
                 >
                   {link.name}
@@ -93,7 +93,7 @@ export const Navbar: React.FC = () => {
                         left: 0,
                         right: 0,
                         height: '2px',
-                        background: 'linear-gradient(90deg, #00D5E8, #12D6A0)',
+                        background: 'linear-gradient(90deg, #00D5E8, #00CDB5, #63E86B)',
                         borderRadius: '2px',
                       }}
                     />
@@ -116,8 +116,8 @@ export const Navbar: React.FC = () => {
                 borderRadius: '50px',
                 fontSize: '13px',
                 fontWeight: 600,
-                color: '#F4F8FF',
-                background: 'rgba(11, 34, 56, 0.85)',
+                color: '#F4F8FC',
+                background: 'rgba(4, 21, 34, 0.85)',
                 border: '1.5px solid rgba(0, 213, 232, 0.45)',
                 textDecoration: 'none',
                 transition: 'all 0.25s ease',
@@ -129,7 +129,7 @@ export const Navbar: React.FC = () => {
                 (e.currentTarget as HTMLElement).style.boxShadow = '0 0 20px rgba(0, 213, 232, 0.3)';
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLElement).style.background = 'rgba(11, 34, 56, 0.85)';
+                (e.currentTarget as HTMLElement).style.background = 'rgba(4, 21, 34, 0.85)';
                 (e.currentTarget as HTMLElement).style.borderColor = 'rgba(0, 213, 232, 0.45)';
                 (e.currentTarget as HTMLElement).style.boxShadow = 'none';
               }}
@@ -143,7 +143,7 @@ export const Navbar: React.FC = () => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 text-[#B8C7D9] hover:text-[#F4F8FF] rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00D5E8]"
+              className="p-2.5 text-[#A9BACB] hover:text-[#F4F8FC] rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00D5E8]"
               aria-expanded={mobileMenuOpen}
               aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
               id="mobile-menu-toggle"
@@ -156,7 +156,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[60px] bg-[#06111F]/98 backdrop-blur-2xl border-b border-[#0B2238] px-6 py-6 shadow-2xl">
+        <div className="lg:hidden fixed inset-x-0 top-[60px] bg-[#020B16]/98 backdrop-blur-2xl border-b border-[rgba(0,213,232,0.20)] px-6 py-6 shadow-2xl">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
@@ -167,17 +167,17 @@ export const Navbar: React.FC = () => {
                   className={`text-base font-medium py-2 px-3 rounded-lg transition-colors ${
                     isActive
                       ? 'text-[#00D5E8] bg-white/[0.05] font-semibold'
-                      : 'text-[#B8C7D9] hover:text-[#F4F8FF] hover:bg-white/[0.04]'
+                      : 'text-[#A9BACB] hover:text-[#F4F8FC] hover:bg-white/[0.04]'
                   }`}
                 >
                   {link.name}
                 </Link>
               );
             })}
-            <div className="pt-4 border-t border-[#0B2238]">
+            <div className="pt-4 border-t border-[rgba(0,213,232,0.20)]">
               <Link
                 to="/contact"
-                className="w-full flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold uppercase tracking-wider text-[#06111F] bg-[#00D5E8] hover:bg-[#00D5E8]/90 rounded-lg shadow-lg shadow-cyan-950/50"
+                className="w-full flex items-center justify-center gap-2 px-5 py-3 text-sm font-bold uppercase tracking-wider text-[#020B16] bg-[#00D5E8] hover:bg-[#00D5E8]/90 rounded-lg shadow-lg shadow-cyan-950/50"
               >
                 <span>Start a Project</span>
                 <ArrowRight className="w-4 h-4" />

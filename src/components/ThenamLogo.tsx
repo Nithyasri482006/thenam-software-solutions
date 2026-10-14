@@ -21,23 +21,23 @@ const LeafEmblem: React.FC<{ height: number }> = ({ height }) => (
     <defs>
       <linearGradient id="leftLeafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stopColor="#00D5E8" />
-        <stop offset="50%" stopColor="#0284C7" />
-        <stop offset="100%" stopColor="#042244" />
+        <stop offset="50%" stopColor="#168BFF" />
+        <stop offset="100%" stopColor="#020B16" />
       </linearGradient>
       <linearGradient id="rightUpperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#84CC16" />
-        <stop offset="60%" stopColor="#65A30D" />
+        <stop offset="0%" stopColor="#63E86B" />
+        <stop offset="60%" stopColor="#00CDB5" />
         <stop offset="100%" stopColor="#EAB308" />
       </linearGradient>
       <linearGradient id="rightLowerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#84CC16" />
+        <stop offset="0%" stopColor="#63E86B" />
         <stop offset="50%" stopColor="#EAB308" />
         <stop offset="100%" stopColor="#B45309" />
       </linearGradient>
       <linearGradient id="spineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stopColor="#FFFFFF" />
-        <stop offset="50%" stopColor="#CBD5E1" />
-        <stop offset="100%" stopColor="#94A3B8" />
+        <stop offset="0%" stopColor="#F4F8FC" />
+        <stop offset="50%" stopColor="#A9BACB" />
+        <stop offset="100%" stopColor="#0A2030" />
       </linearGradient>
       <filter id="leafGlowSm" x="-20%" y="-20%" width="140%" height="140%">
         <feGaussianBlur stdDeviation="1.5" result="blur" />
@@ -72,7 +72,7 @@ const LeafEmblem: React.FC<{ height: number }> = ({ height }) => (
     />
     {/* Network nodes on left leaf */}
     <circle cx="26" cy="36" r="2" fill="#00D5E8" opacity="0.9" />
-    <circle cx="20" cy="48" r="2" fill="#38BDF8" opacity="0.8" />
+    <circle cx="20" cy="48" r="2" fill="#168BFF" opacity="0.8" />
     <circle cx="30" cy="58" r="1.5" fill="#00D5E8" opacity="0.7" />
     {/* Network lines */}
     <line x1="26" y1="36" x2="20" y2="48" stroke="#00D5E8" strokeWidth="0.8" strokeOpacity="0.5" />
@@ -112,7 +112,7 @@ export const ThenamLogo: React.FC<ThenamLogoProps> = ({
               fontWeight: 800,
               fontSize: config.titlePx,
               letterSpacing: '0.08em',
-              background: 'linear-gradient(90deg, #1D4ED8 0%, #00D5E8 50%, #12D6A0 100%)',
+              background: 'linear-gradient(90deg, #168BFF 0%, #00D5E8 50%, #63E86B 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               lineHeight: 1,
@@ -125,7 +125,7 @@ export const ThenamLogo: React.FC<ThenamLogoProps> = ({
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: config.subtitlePx,
               letterSpacing: '0.18em',
-              color: '#B8C7D9',
+              color: '#A9BACB',
               marginTop: '3px',
             }}
           >
@@ -148,7 +148,7 @@ export const ThenamLogo: React.FC<ThenamLogoProps> = ({
             fontWeight: 800,
             fontSize: config.titlePx,
             letterSpacing: '0.1em',
-            background: 'linear-gradient(90deg, #1D4ED8 0%, #00D5E8 50%, #12D6A0 100%)',
+            background: 'linear-gradient(90deg, #168BFF 0%, #00D5E8 50%, #63E86B 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             lineHeight: 1.05,
@@ -162,7 +162,7 @@ export const ThenamLogo: React.FC<ThenamLogoProps> = ({
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: config.subtitlePx,
               letterSpacing: '0.16em',
-              color: '#B8C7D9',
+              color: '#A9BACB',
               marginTop: '1px',
               lineHeight: 1,
             }}
