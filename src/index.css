@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #05080d;
+    --bg-card: #0b111a;
+    --bg-card-hover: #101926;
+    --midnight-blue: #071629;
+    --teal-glow: #00b9c7;
+    --cyan-accent: #00e5ff;
+    --leaf-green: #7ccb32;
+    --golden-yellow: #f2c94c;
+    --text-primary: #f5f7fa;
+    --text-secondary: #a8b0b8;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Subtle futuristic tech grid background */
+.bg-tech-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 185, 199, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 185, 199, 0.04) 1px, transparent 1px);
+}
+
+.bg-radial-vignette {
+  background: radial-gradient(circle at 50% 20%, rgba(7, 22, 41, 0.8) 0%, rgba(5, 8, 13, 0.98) 70%);
+}
+
+/* Logo brand gradient text */
+.text-brand-gradient {
+  background: linear-gradient(90deg, #1D4ED8 0%, #00B9C7 50%, #7CCB32 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-teal-green-gradient {
+  background: linear-gradient(135deg, #00E5FF 0%, #00B9C7 40%, #7CCB32 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-green-gradient {
+  background: linear-gradient(135deg, #F2C94C 0%, #84CC16 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glass & Card styles */
+.glass-nav {
+  background: rgba(5, 8, 13, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.tech-card {
+  background-color: #0B111A;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tech-card:hover {
+  border-color: rgba(0, 185, 199, 0.35);
+  background-color: #0E1622;
+  box-shadow: 0 10px 30px -10px rgba(0, 185, 199, 0.12);
+}
+
+/* Restrained luminous border effect */
+.glow-border-teal {
+  box-shadow: 0 0 25px -5px rgba(0, 185, 199, 0.2);
+}
+
+.glow-border-green {
+  box-shadow: 0 0 25px -5px rgba(124, 203, 50, 0.2);
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #05080D;
+}
+::-webkit-scrollbar-thumb {
+  background: #1B2533;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00B9C7;
+}

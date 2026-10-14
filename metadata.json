@@ -1,0 +1,8 @@
+{
+  "name": "Thenam Software Solutions",
+  "description": "Thenam Software Solutions builds intelligent software, applied AI systems, Thenam Campus, Thenam Connect ERP, and digital growth platforms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <filter id="node-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <linearGradient id="cyberLeafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="40%" stop-color="#0284C7" />
+      <stop offset="75%" stop-color="#00B4D8" />
+      <stop offset="100%" stop-color="#075985" />
+    </linearGradient>
+
+    <linearGradient id="cyberFacet1" x1="0%" y1="0%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0369A1" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="cyberFacet2" x1="10%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#082F49" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="greenGoldGrad1" x1="0%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#84CC16" />
+      <stop offset="35%" stop-color="#65A30D" />
+      <stop offset="70%" stop-color="#EAB308" />
+      <stop offset="100%" stop-color="#CA8A04" />
+    </linearGradient>
+
+    <linearGradient id="greenGoldGrad2" x1="10%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ADE80" />
+      <stop offset="45%" stop-color="#84CC16" />
+      <stop offset="85%" stop-color="#EAB308" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <linearGradient id="veinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FACC15" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#4ADE80" stop-opacity="0.4" />
+    </linearGradient>
+
+    <linearGradient id="spineGrad" x1="0%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#F1F5F9" />
+      <stop offset="30%" stop-color="#CBD5E1" />
+      <stop offset="60%" stop-color="#94A3B8" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="500" rx="100" fill="#04080F" />
+  
+  <g transform="translate(-150, -40) scale(1.0)">
+    <!-- Right Leaf -->
+    <path d="M 440 85 C 470 100 550 160 595 240 C 625 295 620 340 580 375 C 530 410 460 415 385 410 C 420 370 465 310 470 230 C 472 170 455 120 440 85 Z" fill="url(#greenGoldGrad1)" />
+    <path d="M 440 85 C 490 120 575 185 600 270 C 615 320 585 365 540 385 C 485 350 470 270 465 210 C 460 150 445 105 440 85 Z" fill="url(#greenGoldGrad2)" opacity="0.85" />
+    <g stroke="url(#veinGrad)" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.85">
+      <path d="M 462 160 C 490 155 525 162 550 180" />
+      <path d="M 468 200 C 505 198 545 210 575 235" />
+      <path d="M 470 245 C 510 248 555 265 585 300" />
+      <path d="M 465 290 C 500 300 540 325 565 350" />
+    </g>
+
+    <!-- Lower Leaf -->
+    <path d="M 455 300 C 515 325 585 370 575 425 C 565 460 515 480 445 460 C 390 445 355 420 320 410 C 375 405 420 365 455 300 Z" fill="url(#greenGoldGrad1)" />
+
+    <!-- Left Cyber Leaf -->
+    <path d="M 440 85 C 380 90 290 145 240 230 C 205 295 210 360 255 405 C 305 450 370 455 435 415 C 390 350 385 240 440 85 Z" fill="url(#cyberLeafGrad)" />
+    <polygon points="440,85 355,165 315,225 385,210" fill="url(#cyberFacet1)" opacity="0.6" />
+    <polygon points="355,165 240,230 260,310 325,275" fill="url(#cyberFacet2)" opacity="0.75" />
+    <polygon points="315,225 385,210 395,310 325,275" fill="url(#cyberFacet1)" opacity="0.5" />
+    <polygon points="260,310 255,405 340,380 325,275" fill="url(#cyberFacet2)" opacity="0.8" />
+    <polygon points="325,275 395,310 390,395 340,380" fill="url(#cyberFacet1)" opacity="0.65" />
+
+    <!-- Cyber Lines & Nodes -->
+    <g stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round" filter="url(#node-glow)">
+      <line x1="355" y1="165" x2="315" y2="225" />
+      <line x1="315" y1="225" x2="260" y2="310" />
+      <line x1="315" y1="225" x2="385" y2="210" />
+      <line x1="385" y1="210" x2="395" y2="310" />
+      <line x1="325" y1="275" x2="395" y2="310" />
+      <line x1="325" y1="275" x2="340" y2="380" />
+      <line x1="260" y1="310" x2="325" y2="275" />
+      <line x1="395" y1="310" x2="375" y2="400" />
+    </g>
+
+    <g filter="url(#node-glow)">
+      <circle cx="355" cy="165" r="7" fill="#00E5FF" />
+      <circle cx="315" cy="225" r="8" fill="#38BDF8" />
+      <circle cx="385" cy="210" r="7" fill="#00E5FF" />
+      <circle cx="260" cy="310" r="8" fill="#00E5FF" />
+      <circle cx="325" cy="275" r="8.5" fill="#38BDF8" />
+      <circle cx="395" cy="310" r="8" fill="#00E5FF" />
+    </g>
+
+    <!-- Spine -->
+    <path d="M 440 85 C 445 130 440 180 435 230 C 428 290 415 350 375 420 C 350 455 315 480 270 495 C 310 485 365 460 405 425 C 445 380 465 305 470 230 C 472 170 455 120 440 85 Z" fill="url(#spineGrad)" />
+    <path d="M 440 88 C 448 140 445 210 436 270 C 426 330 400 395 340 455" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.9" />
+  </g>
+</svg>
