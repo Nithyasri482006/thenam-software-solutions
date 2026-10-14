@@ -7,78 +7,24 @@ export interface ThenamLogoProps {
   showSubtitle?: boolean;
 }
 
-/* ─── SVG Leaf Emblem (matches Thenam brand: blue/cyan left leaf + green/yellow right leaf) ─── */
-const LeafEmblem: React.FC<{ height: number }> = ({ height }) => (
-  <svg
-    width={height}
-    height={height}
-    viewBox="0 0 80 80"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-    style={{ flexShrink: 0 }}
-  >
-    <defs>
-      <linearGradient id="leftLeafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#00D5E8" />
-        <stop offset="50%" stopColor="#168BFF" />
-        <stop offset="100%" stopColor="#020B16" />
-      </linearGradient>
-      <linearGradient id="rightUpperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#63E86B" />
-        <stop offset="60%" stopColor="#00CDB5" />
-        <stop offset="100%" stopColor="#EAB308" />
-      </linearGradient>
-      <linearGradient id="rightLowerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#63E86B" />
-        <stop offset="50%" stopColor="#EAB308" />
-        <stop offset="100%" stopColor="#B45309" />
-      </linearGradient>
-      <linearGradient id="spineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stopColor="#F4F8FC" />
-        <stop offset="50%" stopColor="#A9BACB" />
-        <stop offset="100%" stopColor="#0A2030" />
-      </linearGradient>
-      <filter id="leafGlowSm" x="-20%" y="-20%" width="140%" height="140%">
-        <feGaussianBlur stdDeviation="1.5" result="blur" />
-        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-      </filter>
-    </defs>
-
-    {/* Right upper green leaf */}
-    <path
-      d="M 44 10 C 52 14 64 26 68 40 C 72 52 66 62 56 66 C 48 70 40 68 36 62 C 42 52 50 38 50 24 C 50 18 47 12 44 10 Z"
-      fill="url(#rightUpperGrad)"
-    />
-    {/* Right lower amber leaf */}
-    <path
-      d="M 50 44 C 58 52 66 60 60 68 C 55 74 46 74 40 70 C 44 64 48 56 50 44 Z"
-      fill="url(#rightLowerGrad)"
-      opacity="0.9"
-    />
-    {/* Left cyan/blue leaf */}
-    <path
-      d="M 44 10 C 34 12 20 24 14 40 C 10 52 14 64 24 68 C 32 72 40 68 44 62 C 38 52 36 36 44 10 Z"
-      fill="url(#leftLeafGrad)"
-    />
-    {/* Central spine */}
-    <path
-      d="M 44 10 C 46 20 46 32 44 44 C 42 56 36 66 28 74"
-      stroke="url(#spineGrad)"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      fill="none"
-      filter="url(#leafGlowSm)"
-    />
-    {/* Network nodes on left leaf */}
-    <circle cx="26" cy="36" r="2" fill="#00D5E8" opacity="0.9" />
-    <circle cx="20" cy="48" r="2" fill="#168BFF" opacity="0.8" />
-    <circle cx="30" cy="58" r="1.5" fill="#00D5E8" opacity="0.7" />
-    {/* Network lines */}
-    <line x1="26" y1="36" x2="20" y2="48" stroke="#00D5E8" strokeWidth="0.8" strokeOpacity="0.5" />
-    <line x1="20" y1="48" x2="30" y2="58" stroke="#00D5E8" strokeWidth="0.8" strokeOpacity="0.4" />
-  </svg>
+/* ─── Leaf Emblem from uploaded official leaf artwork ─── */
+const LeafEmblem: React.FC<{ height: number; className?: string }> = ({ height, className = '' }) => (
+  <img
+    src="/assets/thenam-leaf-original.png"
+    alt="Thenam Software Solutions Leaf Emblem"
+    style={{
+      height: `${height}px`,
+      width: 'auto',
+      objectFit: 'contain',
+      flexShrink: 0,
+      filter: 'drop-shadow(0 0 10px rgba(0, 213, 232, 0.35))',
+    }}
+    className={className}
+    loading="eager"
+    decoding="async"
+  />
 );
+
 
 export const ThenamLogo: React.FC<ThenamLogoProps> = ({
   className = '',
