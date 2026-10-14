@@ -39,11 +39,11 @@ export const HomePage: React.FC = () => {
           style={{ background: 'radial-gradient(ellipse at bottom left, rgba(0, 213, 232, 0.08) 0%, transparent 70%)' }} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center"
-               style={{ minHeight: 'calc(100vh - 64px)', paddingTop: '72px', paddingBottom: '0px' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center"
+               style={{ minHeight: 'calc(100vh - 64px)', paddingTop: '72px', paddingBottom: '24px' }}>
 
             {/* ── LEFT COLUMN ── */}
-            <div className="flex flex-col justify-center space-y-6 lg:pr-8" style={{ paddingTop: '1.5rem', paddingBottom: '2rem' }}>
+            <div className="lg:col-span-5 flex flex-col justify-center space-y-6 lg:pr-4" style={{ paddingTop: '1.5rem', paddingBottom: '2rem' }}>
 
               {/* Eyebrow label */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '11px', fontWeight: 700, letterSpacing: '0.26em', color: '#00D5E8', textTransform: 'uppercase' }}>
@@ -147,8 +147,8 @@ export const HomePage: React.FC = () => {
             </div>
 
             {/* ── RIGHT COLUMN: Hero Leaf Visual ── */}
-            <div className="relative flex items-center justify-center lg:justify-end"
-                 style={{ minHeight: '500px' }}>
+            <div className="lg:col-span-7 relative flex items-center justify-center lg:justify-end"
+                 style={{ minHeight: '520px' }}>
               <HeroLeafNetwork />
             </div>
 
