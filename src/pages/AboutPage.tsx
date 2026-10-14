@@ -18,51 +18,51 @@ import { ThenamLogo } from '../components/ThenamLogo';
 
 export const AboutPage: React.FC = () => {
   return (
-    <div className="relative min-h-screen pt-32 pb-24 bg-[#030712] text-[#F5F7FA]">
+    <div className="relative min-h-screen pt-32 pb-24 bg-[#06111F] text-[#B8C7D9]">
       <SEOHead
         title="About Us | Technology With Purpose. Innovation Without Limits."
         description="Learn about Thenam Software Solutions, an AI and digital product studio established in Chennai engineering intelligent software, digital growth, and connected systems."
       />
 
       {/* Hero Section */}
-      <section className="relative pb-20 border-b border-white/[0.06] bg-tech-grid">
+      <section className="relative pb-20 border-b border-[#0B2238] bg-tech-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl space-y-6">
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.2em] text-[#00E5FF] uppercase">
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.2em] text-[#00D5E8] uppercase">
               <span>About Thenam Software Solutions</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight font-display leading-[1.1] text-balance">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#F4F8FF] tracking-tight font-display leading-[1.1] text-balance">
               Technology With Purpose. Innovation Without Limits.
             </h1>
 
-            <p className="text-xl text-[#CBD5E1] leading-relaxed">
+            <p className="text-xl text-[#B8C7D9] leading-relaxed">
               Thenam Software Solutions brings together software engineering, intelligent technologies, and creative problem-solving to help transform ideas into useful digital experiences.
             </p>
 
-            <div className="pt-2 flex items-center gap-4 text-xs font-mono text-[#94A3B8]">
+            <div className="pt-2 flex items-center gap-4 text-xs font-mono text-[#B8C7D9]">
               <span>Headquarters: Porur, Chennai, India</span>
               <span aria-hidden="true">&bull;</span>
               <span>Founded: 2025</span>
               <span aria-hidden="true">&bull;</span>
-              <span className="text-[#7CCB32]">Applied AI &amp; Software Studio</span>
+              <span className="text-[#12D6A0]">Applied AI &amp; Software Studio</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 border-b border-white/[0.06] relative">
+      <section className="py-20 border-b border-[#0B2238] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-semibold tracking-[0.2em] text-[#00B9C7] uppercase">
+              <span className="text-xs font-semibold tracking-[0.2em] text-[#00D5E8] uppercase">
                 Our Story
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white font-display">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#F4F8FF] font-display">
                 Engineering Digital Ecosystems from Chennai to the World
               </h2>
-              <div className="space-y-4 text-sm sm:text-base text-[#94A3B8] leading-relaxed">
+              <div className="space-y-4 text-sm sm:text-base text-[#B8C7D9] leading-relaxed">
                 <p>
                   Thenam Software Solutions was founded in 2025 in Chennai, India, as an applied artificial intelligence and product engineering studio. We recognized that while software technology was moving rapidly, many organizations were left with fragmented tools, unmanageable codebases, and disconnected operations.
                 </p>
@@ -77,13 +77,13 @@ export const AboutPage: React.FC = () => {
 
             {/* Emblem and Philosophy Card */}
             <div className="lg:col-span-5">
-              <div className="tech-card rounded-3xl p-8 border border-[#00B9C7]/20 glow-border-teal bg-[#07111E] text-center space-y-6">
+              <div className="tech-card rounded-3xl p-8 border border-[#0B2238] glow-border-teal bg-[#071827] text-center space-y-6">
                 <ThenamLogo size="xl" variant="full" showSubtitle={true} />
-                <div className="pt-4 border-t border-white/[0.08] text-left space-y-3">
-                  <h3 className="text-sm font-bold text-white uppercase tracking-wider text-center">
+                <div className="pt-4 border-t border-[#0B2238] text-left space-y-3">
+                  <h3 className="text-sm font-bold text-[#F4F8FF] uppercase tracking-wider text-center">
                     The Emblem: Nature Meets Neural Systems
                   </h3>
-                  <p className="text-xs text-[#94A3B8] leading-relaxed text-center">
+                  <p className="text-xs text-[#B8C7D9] leading-relaxed text-center">
                     The Thenam leaf emblem unites organic biological growth with cybernetic intelligence. The blue-cyan neural lattice represents computing logic and algorithms, while the green-golden leaf represents living prosperity and continuous human evolution.
                   </p>
                 </div>
@@ -94,37 +94,37 @@ export const AboutPage: React.FC = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 border-b border-white/[0.06] bg-[#070D16]">
+      <section className="py-20 border-b border-[#0B2238] bg-[#0B2238]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Our Mission */}
-            <div className="tech-card rounded-2xl p-8 space-y-4 border-t-2 border-t-[#00B9C7]">
-              <div className="w-12 h-12 rounded-xl bg-[#00B9C7]/10 flex items-center justify-center text-[#00E5FF]">
+            <div className="tech-card rounded-2xl p-8 space-y-4 border-t-2 border-t-[#00D5E8]">
+              <div className="w-12 h-12 rounded-xl bg-[#00D5E8]/10 flex items-center justify-center text-[#00D5E8]">
                 <Target className="w-6 h-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white font-display">
+              <h2 className="text-2xl font-bold text-[#F4F8FF] font-display">
                 Our Mission
               </h2>
-              <blockquote className="text-lg text-[#CBD5E1] font-medium leading-relaxed italic">
+              <blockquote className="text-lg text-[#F4F8FF] font-medium leading-relaxed italic">
                 &ldquo;To create useful, reliable, and innovative digital solutions that help businesses and people move forward.&rdquo;
               </blockquote>
-              <p className="text-xs text-[#94A3B8] leading-relaxed pt-2">
+              <p className="text-xs text-[#B8C7D9] leading-relaxed pt-2">
                 We measure our success not by lines of code written, but by the tangible operational clarity and growth our software delivers to users every day.
               </p>
             </div>
 
             {/* Our Vision */}
-            <div className="tech-card rounded-2xl p-8 space-y-4 border-t-2 border-t-[#7CCB32]">
-              <div className="w-12 h-12 rounded-xl bg-[#7CCB32]/10 flex items-center justify-center text-[#7CCB32]">
+            <div className="tech-card rounded-2xl p-8 space-y-4 border-t-2 border-t-[#12D6A0]">
+              <div className="w-12 h-12 rounded-xl bg-[#12D6A0]/10 flex items-center justify-center text-[#12D6A0]">
                 <Compass className="w-6 h-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white font-display">
+              <h2 className="text-2xl font-bold text-[#F4F8FF] font-display">
                 Our Vision
               </h2>
-              <blockquote className="text-lg text-[#CBD5E1] font-medium leading-relaxed italic">
+              <blockquote className="text-lg text-[#F4F8FF] font-medium leading-relaxed italic">
                 &ldquo;To make technology more accessible, intelligent, and impactful through thoughtful software and digital innovation.&rdquo;
               </blockquote>
-              <p className="text-xs text-[#94A3B8] leading-relaxed pt-2">
+              <p className="text-xs text-[#B8C7D9] leading-relaxed pt-2">
                 We envision an interconnected digital landscape where artificial intelligence and software infrastructure elevate human ingenuity across commerce, education, and industry.
               </p>
             </div>
@@ -133,16 +133,16 @@ export const AboutPage: React.FC = () => {
       </section>
 
       {/* Our Core Values */}
-      <section className="py-20 border-b border-white/[0.06]">
+      <section className="py-20 border-b border-[#0B2238]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-14 space-y-3">
-            <span className="text-xs font-semibold tracking-[0.2em] text-[#00E5FF] uppercase">
+            <span className="text-xs font-semibold tracking-[0.2em] text-[#00D5E8] uppercase">
               Principles &amp; Culture
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white font-display">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#F4F8FF] font-display">
               Our Core Values
             </h2>
-            <p className="text-sm text-[#94A3B8]">
+            <p className="text-sm text-[#B8C7D9]">
               The fundamental tenets that guide our technical choices, client relationships, and team standards.
             </p>
           </div>
@@ -152,17 +152,17 @@ export const AboutPage: React.FC = () => {
               {
                 title: 'Innovation',
                 desc: 'Pursuing novel approaches, modern architectural patterns, and applied machine learning to solve hard engineering problems.',
-                color: 'text-[#00E5FF]',
+                color: 'text-[#00D5E8]',
               },
               {
                 title: 'Quality',
                 desc: 'Uncompromising craft in code structure, type safety, test coverage, and documentation to build durable software.',
-                color: 'text-[#0284C7]',
+                color: 'text-[#00D5E8]',
               },
               {
                 title: 'Collaboration',
                 desc: 'Direct, honest partnerships with stakeholders, maintaining clarity, open channels, and continuous feedback loops.',
-                color: 'text-[#7CCB32]',
+                color: 'text-[#12D6A0]',
               },
               {
                 title: 'User-Focused Design',
@@ -172,19 +172,19 @@ export const AboutPage: React.FC = () => {
               {
                 title: 'Continuous Improvement',
                 desc: 'Constantly evaluating system metrics, refining workflows, and modernizing toolchains to remain at the leading edge.',
-                color: 'text-[#00E5FF]',
+                color: 'text-[#00D5E8]',
               },
               {
                 title: 'Responsible Technology',
                 desc: 'Building with privacy by design, robust cybersecurity safeguards, and ethical data handling across all AI systems.',
-                color: 'text-[#7CCB32]',
+                color: 'text-[#12D6A0]',
               },
             ].map((v, i) => (
               <div key={i} className="tech-card rounded-2xl p-6 space-y-3">
                 <span className={`text-base font-bold font-display ${v.color}`}>
                   {v.title}
                 </span>
-                <p className="text-xs text-[#94A3B8] leading-relaxed">
+                <p className="text-xs text-[#B8C7D9] leading-relaxed">
                   {v.desc}
                 </p>
               </div>
@@ -194,16 +194,16 @@ export const AboutPage: React.FC = () => {
       </section>
 
       {/* Our Approach Section */}
-      <section className="py-20 border-b border-white/[0.06] bg-[#070D16]">
+      <section className="py-20 border-b border-[#0B2238] bg-[#0B2238]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-14 space-y-3">
-            <span className="text-xs font-semibold tracking-[0.2em] text-[#7CCB32] uppercase">
+            <span className="text-xs font-semibold tracking-[0.2em] text-[#12D6A0] uppercase">
               Engineering Mindset
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white font-display">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#F4F8FF] font-display">
               Our Engineering Approach
             </h2>
-            <p className="text-sm text-[#94A3B8]">
+            <p className="text-sm text-[#B8C7D9]">
               How we understand requirements, design suitable solutions, develop software, test carefully, and continue improving products.
             </p>
           </div>
@@ -241,20 +241,20 @@ export const AboutPage: React.FC = () => {
                 className="tech-card rounded-2xl p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
               >
                 <div className="flex items-start sm:items-center gap-5">
-                  <span className="text-xl font-mono font-bold text-[#00E5FF] shrink-0">
+                  <span className="text-xl font-mono font-bold text-[#00D5E8] shrink-0">
                     {step.step}
                   </span>
                   <div>
-                    <h3 className="text-base font-bold text-white font-display">
+                    <h3 className="text-base font-bold text-[#F4F8FF] font-display">
                       {step.title}
                     </h3>
-                    <p className="text-xs text-[#94A3B8] leading-relaxed mt-1 max-w-3xl">
+                    <p className="text-xs text-[#B8C7D9] leading-relaxed mt-1 max-w-3xl">
                       {step.desc}
                     </p>
                   </div>
                 </div>
                 <div className="shrink-0">
-                  <CheckCircle className="w-5 h-5 text-[#7CCB32]/70" />
+                  <CheckCircle className="w-5 h-5 text-[#12D6A0]" />
                 </div>
               </div>
             ))}
@@ -265,19 +265,19 @@ export const AboutPage: React.FC = () => {
       {/* CTA Section */}
       <section className="pt-20 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white font-display">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#F4F8FF] font-display">
             Work With Us
           </h2>
-          <p className="text-sm text-[#94A3B8] leading-relaxed">
+          <p className="text-sm text-[#B8C7D9] leading-relaxed">
             Ready to explore how Thenam Software Solutions can accelerate your digital roadmap? Our engineering team in Chennai is ready to collaborate.
           </p>
           <div>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-3.5 text-xs font-semibold uppercase tracking-wider text-white bg-gradient-to-r from-[#00B9C7] via-[#0284C7] to-[#1D4ED8] rounded-full hover:shadow-[0_0_25px_rgba(0,185,199,0.4)] transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-[#06111F] bg-[#00D5E8] hover:bg-[#00D5E8]/90 rounded-full shadow-[0_0_25px_rgba(0,213,232,0.4)] transition-all duration-300"
             >
               <span>Initiate Project Consultation</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 text-[#06111F]" />
             </Link>
           </div>
         </div>
